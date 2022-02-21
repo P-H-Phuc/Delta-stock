@@ -1,0 +1,423 @@
+#company-profile {
+  height: 100%;
+  background-color: #444;
+}
+
+#company-profile-row-1 {
+  position: sticky;
+  display: flex;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  height: 78px;
+  width: 100%;
+  z-index: 900;
+  opacity: 0.95;
+  box-shadow: 0 10px 5px 0 #666;
+}
+
+/*ROW 1*/
+/* Dropdown */
+#search-symbol {
+  width: 100%;
+  position: sticky;
+  top: 1.5rem;
+  z-index: 1;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(45deg, black, black, #205AA7);
+}
+.Select-clear:hover {
+  color: black;
+}
+#search-symbol .Select-control {
+  background-color: transparent;
+  box-shadow: 2px 2px 5px #426EB4;
+  color: #eee;
+  display: table;
+  height: 36px;
+  overflow: hidden;
+  border-right: 1px solid #222;
+  border-bottom: 1px solid #222;
+  border-left: 0;
+  border-top: 0;
+  border-radius: 0.5rem;
+}
+#search-symbol .Select-placeholder {
+    font-size: 13px;
+    color: #eee;
+    background-color: transparent;
+    height: 35px;
+    border-radius: 0.5rem;
+    z-index: 2;
+    border: 0;
+  }
+#search-symbol .Select.has-value.Select--single > .Select-control .Select-value .Select-value-label, .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+  color: #eee;
+  font-size: 13px;
+  z-index: 2;
+}
+#search-symbol .is-open>.Select-control {
+  border-radius: 0.5rem;
+  caret-color: white;
+}
+#search-symbol input{
+  color: white;
+  border: none;
+  background: rgba(0,0,0,0);
+}
+#search-symbol .Select-menu-outer {
+  color: #eee; 
+  font-size: 12px;
+  width: 100%;
+  border: 1px solid #666;
+  border-radius: 0.5rem;
+  background-color:#103667;
+  opacity: 0.95;
+}
+#search-symbol .Select-menu-outer div:hover {
+  color: white;
+}
+#search-symbol .VirtualizedSelectFocusedOption {
+  background-color: #184785;
+  color: #eee;
+  border-left: 5px solid #205AA7;
+  border-radius: 0.5rem;
+}
+
+/* Button */
+#update-view {
+  border: 1px solid #666;
+  height: 52%;
+  width: 100%;
+  position: sticky;
+  left: 80%;
+  top: 18px;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, black, #205AA7);
+  text-align: center;
+  font-size: 14px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: white;
+  vertical-align: middle;
+  box-shadow: 2px 2px 5px #426EB4;
+}
+#update-view::before {
+  content: '';
+  width: 0;
+  height: 500%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #205AA7;
+  display: block;
+  z-index: -1;
+}
+#update-view:hover::before {
+  width: 105%;
+}
+#update-view:hover {
+  color: white;
+}
+
+/*Time update*/
+#view-ing {
+  position: sticky;
+  left: 90%;
+  top: 16px;
+  font-size: 14px;
+  color: white!important;
+  width: 100%;
+  padding-top: 10px;
+  border-bottom: 1px solid;
+}
+
+/*ROW 2*/
+#company-profile-tabs {
+  height: 60px;
+}
+#tab-basic-info {
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #D7D7D7;
+  font-size: 14px;
+  background-image: linear-gradient(45deg, black, #00676B);
+  border: none;
+}
+.tab--selected {
+  color: white !important;
+  font-weight: bold !important;
+  border-top: 3px solid #e36209 !important;
+}
+#company-profile-output-tab {
+  position: sticky;
+  padding-top: 20px;
+  padding-left: 5px;
+  width: 100%;
+  background-color: #444;
+  height: auto;
+  min-height: 615px;
+}
+/*Live price*/
+#company-profile-live-price {
+  position: absolute;
+  background-image: linear-gradient(45deg, black, black, #780062);
+  border: 1px solid #666;
+  height: 175px;
+  top: 20px;
+  width: 27%;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px #780062;
+}
+
+#company-profile-live-price .main-svg {
+  background-color: transparent;
+  height: 235px
+}
+#company-profile-live-price .main-svg .indicatorlayer .trace .numbers .number {
+  font-size: 60px !important;
+  fill: #dea500 !important;
+}
+
+/*Market Cap*/
+#company-profile-marketCap {
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid #666;
+  height: 168px;
+  top: 203px;
+  width: 27%;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(45deg, black, black, #52096C);
+  box-shadow: 5px 5px 5px #52096c;
+}
+#company-profile-marketCap .main-svg {
+  height: 175px;
+  top: -35px;
+}
+
+#company-profile-marketCap .main-svg .indicatorlayer .trace .numbers .number {
+  font-size: 80px !important;
+  fill: #bfbfbf !important;
+}
+
+/*beta*/
+#company-profile-beta {
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid #666;
+  height: 168px;
+  top: 382px;
+  width: 27%;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(45deg, black, black, #C18C00);
+  box-shadow: 5px 5px 5px #C18C00;
+}
+
+#company-profile-beta .main-svg {
+  height: 175px;
+  top: -35px;
+}
+
+#company-profile-beta .main-svg .indicatorlayer .trace .numbers .number {
+  font-size: 80px !important;
+  fill: #bfbfbf !important;
+}
+
+/*Basic information*/
+#basic-info {
+  position: relative;
+  width: 70%;
+  left: 28%;
+  height: 530px;
+  overflow: auto;
+  border: 1px solid #666;
+  border-radius: 0.5rem;
+  background-color: black;
+  box-shadow: 10px 10px 10px #111;
+}
+
+#companyImage {
+  width: 170px;
+  height: 80px;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+#companyName {
+  position: absolute;
+  top: 20px;
+  left: 14rem;
+  text-transform: uppercase;
+  font-size: 21px;
+  font-weight: 400;
+  color: #dea500;
+}
+
+#companyNameEng {
+  position: absolute;
+  top: 63px;
+  left: 14rem;
+  font-size: 20px;
+  color: gray;
+}
+
+#vnSummary {
+  font-size: 16px;
+  color: gray;
+  line-height: 1.5rem;
+  text-align: justify;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+#info-listed {
+  font-size: 18px;
+  text-align: center;
+  color: #dea500;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid;
+  width: 240px;
+}
+#info-fundamental {
+  font-size: 18px;
+  text-align: center;
+  color: #dea500;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid;
+  width: 240px;
+}
+h5 {
+  display: list-item;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-size: 16px !important;
+  line-height: 1.5rem;
+  color: gray;
+  text-align: justify;
+}
+h6 {
+  white-space: pre-line;
+  margin-left: 1rem;
+  font-size: 16px !important;
+  line-height: 1.8rem;
+  color: gray;
+  text-align: justify;
+}
+
+/*tbl shareholders*/
+#tbl-shareholders {
+  position: relative;
+  width: 60% !important;
+  height: 500px !important;
+  padding-left: 10px;
+}
+#tbl-shareholders .dash-header {
+  background-color: #222;
+}
+#tbl-shareholders .column-header-name {
+  color: white;
+  font-size: 14px;
+}
+#tbl-shareholders .dash-cell {
+  background-color: rgb(50, 50, 50);
+  font-size: 13px; 
+  border-bottom: 1px solid #666 !important;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+/**graph shareholders*/
+#graph-shareholders {
+  width: 38%;
+  height: 500px;
+  margin-left: 10px;
+  position: absolute;
+  left: 60%;
+  top: 20px;
+  background-color: black;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px #222;
+}
+
+/*Chart historical price*/
+#company-profile-graph-historical-price {
+  position: absolute;
+  width:79%;
+  height: 400px;
+  padding-left: 20px;
+  border-radius: 0.5rem;
+  background-color: black;
+}
+#company-profile-graph-historical-price .main-svg {
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px #222;
+  width: 100%;
+}
+#company-profile-graph-histogram {
+  position: absolute;
+  width: 18%;
+  height: 400px;
+  top: 20px;
+  left: 80%;
+  margin-left: 10px;
+  background-color: black;
+  border-radius: 0.5rem;
+}
+#company-profile-graph-histogram .main-svg {
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px #222;
+}
+
+/*tbl-historical-price*/
+#company-profile-tbl-historical-price {
+  display: inline-block;
+  flex-direction: row;
+  position: relative;
+  line-height: initial;
+  margin-top: 420px;
+  width: 100% !important;
+  height: 400px !important;
+}
+
+#company-profile-tbl-historical-price .dash-header {
+  text-align: center;
+  background-color: #103667;
+}
+
+#company-profile-tbl-historical-price .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .dash-header > div, .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .dash-filter > div {
+  display: block !important;
+}
+
+#company-profile-tbl-historical-price .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td {
+background-color: #111;
+}
+
+#company-profile-tbl-historical-price .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .column-actions {
+  display: block !important; 
+  flex-wrap: wrap;
+}
+
+#company-profile-tbl-historical-price .column-header-name {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+#company-profile-tbl-historical-price .dash-cell {
+  background-color: rgb(50, 50, 50);
+  font-size: 13px; 
+  border-bottom: 1px solid #666 !important;
+  padding-left: 5px;
+  padding-right: 10px;
+  text-align: center;
+}

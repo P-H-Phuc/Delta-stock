@@ -1,0 +1,132 @@
+*{
+  font-family: Helvetica;
+}
+
+.row {
+  --bs-gutter-x: 0rem;
+  --bs-gutter-y: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.sidebar-footer {
+  margin-top: 6rem;
+}
+.flex-column {
+  flex-direction: column!important;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.nav-pills .nav-link {
+  color: #828282;
+  border-radius: 0.3rem;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background: 0 0;
+  transition: color .05s ease-in-out, background-color .05s ease-in-out, border-color .05s ease-in-out;
+  text-decoration: none;
+}
+
+.nav-pills .nav-link.active {
+  background-color: rgba(190,190,190,0.05);
+  color: #fff;
+  border-left: 4px solid #dea500;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: rgba(190,190,190,0.05);
+  border-left: 4px solid #dea500;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 17px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.js-plotly-plot .plotly .cursor-ew-resize {
+  cursor: revert !important;
+  }
+
+/*HEADER SEARCH*/
+  #search-symbol-column {
+    position: absolute;
+    margin-top: 1rem;
+    left: 1%;
+    width: 23%;
+    height: 53%;
+  }
+  
+  #update-view-column {
+    position: absolute;
+    margin-left: 66%;
+    width: 6%;
+    height: 100%;
+  }
+  
+  #date-picker-column {
+    position: absolute;
+    margin-left: 30%;
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+  }
+  
+  #time-update-view-column {
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 83%;
+    width: 17%;
+    height: 54px;
+}
+
+tr:hover {
+    background-color: rgb(41, 56, 55) !important;
+  }
+
+.btn-primary:focus {
+    color: #fff;
+    background-color: #2487b6;
+    border-color: #227fab;
+    box-shadow: none;
+}
+/* .main-svg {
+  background-color: transparent !important;
+} */
+.main-svg .indicatorlayer .trace .title {
+  font-family: inherit !important;
+  font-size: 14px !important;
+}
+.main-svg .indicatorlayer .trace .numbers .number {
+  fill: #dea500 !important;
+}
+.main-svg {
+  background-color: transparent !important;
+}
+.js-plotly-plot .plotly .user-select-none {
+  margin: auto;
+}

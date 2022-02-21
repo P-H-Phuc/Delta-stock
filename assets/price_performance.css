@@ -1,0 +1,618 @@
+#price-performance {
+    height: 2000px;
+    background-color: transparent;
+  }
+  
+#price-performance-row-1 {
+    position: sticky;
+    display: inline-flex;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    height: 3.25%;
+    width: 100%;
+    z-index: 900;
+    opacity: 0.95;
+    box-shadow: 0 10px 5px 0 #666;
+  }
+
+/* Dropdown */
+#pp-search-symbol {
+  width: 100%;
+  position: sticky;
+  top: 1.5rem;
+  z-index: 1;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(45deg, black, black, #205AA7);
+}
+.Select-clear:hover {
+  color: black;
+}
+#pp-search-symbol .Select-control {
+  background-color: transparent;
+  box-shadow: 2px 2px 5px #426EB4;
+  color: #eee;
+  display: table;
+  height: 36px;
+  overflow: hidden;
+  border-right: 1px solid #222;
+  border-bottom: 1px solid #222;
+  border-left: 0;
+  border-top: 0;
+  border-radius: 0.5rem;
+}
+#pp-search-symbol .Select-placeholder {
+    font-size: 13px;
+    color: #eee;
+    background-color: transparent;
+    height: 35px;
+    border-radius: 0.5rem;
+    z-index: 2;
+    border: 0;
+  }
+#pp-search-symbol .Select.has-value.Select--single > .Select-control .Select-value .Select-value-label, .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+  color: #eee;
+  font-size: 13px;
+  z-index: 2;
+}
+#pp-search-symbol .is-open>.Select-control {
+  border-radius: 0.5rem;
+  caret-color: white;
+}
+#pp-search-symbol input{
+  color: white;
+  border: none;
+  background: rgba(0,0,0,0);
+}
+#pp-search-symbol .Select-menu-outer {
+  color: #eee; 
+  font-size: 12px;
+  width: 100%;
+  border: 1px solid #666;
+  border-radius: 0.5rem;
+  background-color:#103667;
+  opacity: 0.95;
+}
+#pp-search-symbol .Select-menu-outer div:hover {
+  color: white;
+}
+#pp-search-symbol .VirtualizedSelectFocusedOption {
+  background-color: #184785;
+  color: #eee;
+  border-left: 5px solid #205AA7;
+  border-radius: 0.5rem;
+}
+
+/* Button */
+#pp-update-view {
+  border: 1px solid #666;
+  height: 52%;
+  width: 100%;
+  position: sticky;
+  left: 80%;
+  top: 16px;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, black, #205AA7);
+  text-align: center;
+  font-size: 14px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: white;
+  vertical-align: middle;
+  box-shadow: 2px 2px 5px #426EB4;
+}
+#pp-update-view::before {
+  content: '';
+  width: 0;
+  height: 500%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #205AA7;
+  display: block;
+  z-index: -1;
+}
+#pp-update-view:hover::before {
+  width: 105%;
+}
+#pp-update-view:hover {
+  color: white;
+}
+
+/*PickerDateRange*/
+#range-date {
+  position: sticky !important;
+  top: 16px;
+  left: 36.5rem !important;
+  display: inline-block !important;
+  width: 25rem;
+  padding-left: 30px;
+}
+
+#range-date .DateRangePickerInput__withBorder {
+  background-color: transparent;
+  border: 0;
+}
+  
+#range-date .DateInput {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(45deg, black, #205AA7);
+  box-shadow: 2px 2px 5px #426EB4;
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  border-radius: 0.5rem;
+  }
+  
+#range-date .DateInput_input {
+  box-sizing: border-box;
+  color: white;
+  font-size: 13px;
+  background-image: linear-gradient(45deg, black, #205AA7);
+  text-align: center;
+  height: 36px;
+  border-radius: 0.5rem;
+  border: none;
+}
+#range-date .DateInput_input__focused {
+  background-image: linear-gradient(45deg, black, #205AA7);
+  border: none;
+}
+
+#range-date .CalendarMonth {
+  background: none;
+  text-align: center;
+  height: 100px;
+  border: none;
+  vertical-align: top;
+}
+#range-date .CalendarMonth_caption {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 37px;
+  caption-side: initial;
+  background-color: #426EB4;
+}
+#range-date .CalendarMonth_caption__verticalScrollable {
+  padding-top: 12;
+  padding-bottom: 7;
+}
+
+#range-date .CalendarMonth_table {
+  border-collapse: 'collapse';
+  border-spacing: 0;
+  background-color: #696969;
+}
+#range-date .CalendarDay__default {
+  border: 0;
+  color: white;
+  background: #696969;
+  font-size: 12px;
+}
+#range-date .CalendarDay__default:hover {
+  background: #426EB4;
+  color: white;
+  font-weight: bold;
+  border: 1px solid;
+}
+#range-date .CalendarDay__default:active {
+  background-color:orange
+}
+#range-date .DateRangePickerInput_clearDates {
+  background: 0 0;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  /* -webkit-transform: translateY(-50%); */
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+} 
+#range-date .DateRangePickerInput_clearDates_svg {
+  fill: white;
+  height: 12px;
+  width: 15px;
+  vertical-align: middle;
+}
+#range-date .DateRangePickerInput_clearDates_svg:hover {
+  fill: red;
+  height: 12px;
+  width: 15px;
+  vertical-align: middle;
+}
+#range-date .DateRangePickerInput_arrow_svg {
+  vertical-align: middle;
+  fill: white;
+  height: 19px;
+  width: 32px;
+}
+#range-date .DayPicker_weekHeader_li {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+#range-date .DayPickerNavigation_button__default {
+  border: none;
+  background-color: inherit;
+  color: var(--themeDefault);
+}
+.DateRangePicker_picker {
+  z-index: 1;
+  background-color: transparent;
+  position: absolute;
+}
+.DayPicker__horizontal {
+  background: transparent;
+}
+#range-date .DayPickerNavigation_svg__horizontal {
+  height: 19px;
+  width: 19px;
+  fill: white;
+  display: block;
+}
+#range-date .DateInput_fangStroke {
+  stroke: #426EB4;
+  fill: #426EB4;
+}
+#range-date .DateInput_fang {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  left: 94px;
+  z-index: 2;
+}
+#range-date .CalendarMonthGrid__horizontal {
+  /* position: absolute; */
+  left: 10px;
+  background: inherit;
+  width: 300px;
+}
+#range-date .DayPicker_transitionContainer {
+  /* position: fixed; */
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: transparent;
+}  
+#range-date .DayPickerKeyboardShortcuts_show__bottomRight {
+  display: none;
+}
+/*view_ing*/
+#pp-view-ing {
+  position: sticky;
+  left: 90%;
+  top: 1.6%;
+  font-size: 14px;
+  color: #CCC !important;
+  width: 20%;
+  padding-top: 10px;
+  border-bottom: 1px solid;
+}
+/*Live*/
+#price-performance-live-price .js-plotly-plot .plotly {
+  background: none;
+  background-image: linear-gradient(45deg,black, black, black, #976D00);
+  box-shadow: 2px 2px 5px 0 #F3C246;
+  height: 180px;
+  border-radius: 0.5rem;
+}
+#price-performance-high52w .js-plotly-plot .plotly {
+  background-image: linear-gradient(45deg,black, black, black, #367517);
+  box-shadow: 2px 2px 5px 0 #83C75D;
+  height: 180px;
+  border-radius: 0.5rem;
+}
+#price-performance-low52w .js-plotly-plot .plotly {
+  background-image: linear-gradient(45deg,black, black, black, #006241);
+  box-shadow: 2px 2px 5px 0 #98D0B9;
+  height: 180px;
+  border-radius: 0.5rem;
+}
+#price-performance-PE .js-plotly-plot .plotly {
+  background-image: linear-gradient(45deg,black, black, black, #8F006D);
+  box-shadow: 2px 2px 5px 0 #D2A6C7;
+  height: 180px;
+  border-radius: 0.5rem;
+}
+#price-performance-return-rate .js-plotly-plot .plotly {
+  background-image: linear-gradient(45deg,black, black, black, #B2001F);
+  box-shadow: 2px 2px 5px 0 #EE7C6B;
+  height: 180px;
+  border-radius: 0.5rem;
+}
+#price-performance-live-price ,#price-performance-high52w, #price-performance-low52w, #price-performance-PE, #price-performance-return-rate {
+  position: absolute;
+  height: 180px;
+  top: 97px;
+  width: 16.5%;
+}
+.plot-container> .plotly {
+  display: flex;
+  justify-content: center;
+
+}
+#price-performance-live-price .js-plotly-plot .plotly .main-svg, #price-performance-high52w .js-plotly-plot .plotly .main-svg, #price-performance-low52w .js-plotly-plot .plotly .main-svg, #price-performance-PE .js-plotly-plot .plotly .main-svg, #price-performance-return-rate .js-plotly-plot .plotly .main-svg{
+  height: 180px;
+}
+
+/*Chart historical price*/
+#price-performance-graph-historical-price {
+  position: absolute;
+  width: 71%;
+  height: 450px;
+  top: 300px;
+  background-color: black;
+  box-shadow: 5px 5px 5px black;
+  border: 1px solid #111;
+  border-radius: 0.5rem;
+}
+#price-performance-graph-historical-price .points .point > path {
+  fill-opacity: 0.5 !important;
+  /* fill: #64004B !important; */
+}
+/*RadioItems*/
+#radio-items-trendlines {
+  line-height: 4rem;
+  position: absolute;
+  top: 300px;
+  height: 450px;
+  left: 86.5%;
+  width: 13%;
+  background-color: black;
+  border: 1px solid black;
+  padding-left: 20px;
+  box-shadow: 3px 3px 5px black;
+  border-radius: 0.5rem;
+}
+
+label {
+  display: inline-block;
+  margin-right: 37px;
+  color: #00FFFF;
+  font-size: 15px;
+}
+
+#trendline-rolling-number {
+  background-color: #111;
+  position: absolute;
+  top: 477px;
+  left: 88%;
+  width: 110px;
+  color: #eee;
+  border-radius: 0.5rem;
+}
+
+#trendline-lowess-frac {
+  background-color: #111;
+  position: absolute;
+  top: 541px;
+  left: 88%;
+  width: 110px;
+  color: #eee;
+  border-radius: 0.5rem;
+}
+
+#trendline-ewm-halflife {
+  background-color: #111;
+  position: absolute;
+  top: 602px;
+  left: 88%;
+  width: 110px;
+  color: #eee;
+  border-radius: 0.5rem;
+}
+
+#price-performance-graph-pie-updown {
+  position: absolute;
+  top: 1285px;
+  width: 20%;
+  left: 79%;
+  height: 300px;
+  border: 1px solid #222;
+  background-color: black;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 0.5rem;
+}
+
+#pp-descriptive-stat {
+  width: 62.6%;
+  position: absolute !important;
+  top: 1285px;
+  height: 300px;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 0.5rem;
+}
+
+#pp-descriptive-stat .dash-header {
+  text-align: center;
+  background-color: #222 !important;
+}
+
+#pp-descriptive-stat .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .dash-header > div, .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .dash-filter > div {
+  display: block !important;
+}
+
+#pp-descriptive-stat .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td {
+background-color: #111;
+}
+
+#pp-descriptive-stat .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .column-actions {
+  display: block !important; 
+  flex-wrap: wrap;
+}
+
+#pp-descriptive-stat .column-header-name {
+  color: white;
+  font-size: 13px;
+  text-align: center;
+}
+#pp-descriptive-stat .dash-cell {
+  background-color: rgb(50, 50, 50);
+  font-size: 13px; 
+  border-bottom: 1px solid #666 !important;
+  padding-left: 5px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+#pp-tbl-historical-price {
+  width: 79.25%;
+  position: absolute !important;
+  top: 770px;
+  left: 14.2rem;
+  height: 450px;
+  box-shadow: 5px 10px 10px black;
+  border-radius: 0.5rem;
+}
+.dash-table-container .dash-spreadsheet-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  line-height: initial;
+  border-radius: 0.5rem;
+}
+.export {
+  background-image: linear-gradient(270deg, black, #222) !important;
+  color: #00FFFF;
+  position: absolute;
+  left: 101%;
+  z-index: 400;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 0.5rem;
+}
+#pp-tbl-historical-price .dash-header {
+  text-align: center !important;
+  background-color: #222 !important;
+  z-index: 1;
+  border: none;
+}
+
+#pp-tbl-historical-price .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .dash-header > div, .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .dash-filter > div {
+  display: block !important;
+}
+
+#pp-tbl-historical-price .dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner .column-actions {
+  display: block !important; 
+  flex-wrap: wrap;
+}
+
+#pp-tbl-historical-price .column-header-name {
+  color: white;
+  font-size: 13px;
+  text-align: center;
+}
+#pp-tbl-historical-price .dash-cell {
+  font-size: 13px; 
+  border-bottom: 1px solid #666 !important;
+  padding-left: 5px;
+  padding-right: 10px;
+  text-align: center;
+}
+.dash-table-container .previous-next-container button.previous-page, .dash-table-container .previous-next-container button.next-page, .dash-table-container .previous-next-container button.first-page, .dash-table-container .previous-next-container button.last-page {
+  transition-duration: 400ms;
+  padding: 1px;
+  border: none;
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 10px;
+  background-color: #999;
+  margin-right: 5px;
+}
+
+#displot {
+  background-color: #111;
+  position: absolute;
+  top: 1610px;
+  width: 33%;
+  height: 350px;
+  border: 1px solid #222;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px black;
+}
+
+#cummulative-graph {
+  background-color: #111;
+  position: absolute;
+  top: 1610px;
+  left: 49%;
+  border-radius: 0.5rem;
+  border: 1px solid #222;
+  box-shadow: 5px 5px 5px black;
+  height: 350px;
+  width: 29%;
+}
+
+#VaR-col {
+  border: 1px solid black;
+  position: absolute;
+  top: 1610px;
+  height: 350px;
+  left: 79%;
+  width: 20%;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(45deg, black, #945305);
+}
+
+#text-VaR {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#symbol-of-VaR {
+  text-align: center;
+  font-size: 24px;
+  color: yellow;
+}
+#nbr-shares {
+  width: 160px;
+  background-color: #222;
+  margin-left: 5px;
+  color: white;
+  text-align: left;
+  padding-right: 14px;
+}
+#confidence-level-VaR {
+  width: 160px;
+  background-color: #222;
+  margin-left: 18px;
+  color: white;
+  text-align: left;
+  padding-right: 14px;
+}
+#days-VaR {
+  width: 160px;
+  background-color: #222;
+  margin-left: 31px;
+  color: white;
+  text-align: left;
+  padding-right: 14px;
+}
+
+#calculate-VaR {
+  margin-left: 203px;
+  margin-top: 10px;
+  background-color: #000;
+  border: 1px solid #666;
+  height: 30px;
+  padding-top: 2px;
+}
+
+#div-VaR {
+  background-color: #000;
+  width: 290px;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-left: 3px;
+  padding-left: 20px;
+  color: chocolate;
+  height: 86px;
+}
